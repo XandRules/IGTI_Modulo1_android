@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/margem_padrao"
+    android:padding="@dimen/margem_padrao"
+    tools:context=".ui.incluirfrase.IncluirFraseActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/autoresFraseTIL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/autoresFraseED"
+            android:inputType="textCapSentences"
+            android:hint="@string/autores" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margem_interna"
+      android:id="@+id/fraseTIL"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/autoresFraseTIL">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+          android:id="@+id/frasesET"
+          android:minLines="4"
+          android:hint="@string/citacao"
+          android:gravity="start|top"
+          android:inputType="textCapSentences|textMultiLine"
+          />
+
+      ></com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_cancelar"
+        android:id="@+id/btnCancelar"
+        android:layout_marginEnd="@dimen/margem_interna_pequena"
+        android:layout_marginTop="@dimen/margem_interna"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fraseTIL"
+        app:layout_constraintEnd_toStartOf="@id/btnSalvar"
+
+        />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_salvar"
+        android:layout_marginTop="@dimen/margem_interna"
+        android:layout_marginStart="@dimen/margem_interna_pequena"
+        android:id="@+id/btnSalvar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fraseTIL"
+        app:layout_constraintStart_toEndOf="@id/btnCancelar"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
